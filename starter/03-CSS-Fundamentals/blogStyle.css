@@ -10,6 +10,19 @@ body {
 .container {
     width: 800px;
     margin: 30px auto;
+    position: relative;
+}
+
+.container::after {
+    content: "SALE";
+    font-weight: bold;
+    letter-spacing: 2px;
+    background-color: red;
+    color: white;
+    padding: 10px 15px;
+    position:absolute;
+    top: -10px;
+    left: -35px;
 }
 
 .main {
@@ -17,6 +30,7 @@ body {
 }
 
 .header {
+    text-transform: uppercase;
     text-align: center;
     background-color: #f7f7f7;
     padding: 20px;
@@ -50,6 +64,37 @@ body {
 
 .info-link:hover {
     cursor: pointer;
+}
+
+.colors {
+    margin-top: 40px;
+}
+
+.color {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    margin: 0 5px;
+}
+
+.colors:last-child {
+    margin-right: 0;
+}
+
+.black {
+    background-color: black;
+}
+
+.red {
+    background-color: red;
+}
+
+.blue {
+    background-color: blue;
+}
+
+.green {
+    background-color: green;
 }
 
 h2 {

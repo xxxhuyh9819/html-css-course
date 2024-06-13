@@ -5,11 +5,22 @@
 
 body {
     font-family: Arial;
+    position: relative;
 }
 
 .container {
     width: 800px;
     margin: 0 auto;
+}
+
+nav a:link {
+    display: inline-block;
+    margin-right: 20px;
+    margin-top: 10px;
+}
+
+nav a:link:last-child {
+    margin-right: 0;
 }
 
 .main-header {
@@ -18,8 +29,17 @@ body {
     margin-bottom: 20px;
 }
 
+.main-header h1:first-letter {
+    font-style: normal;
+}
+
 .post-header {
     margin-bottom: 40px;
+}
+
+
+.post-header img {
+    margin-top: 100px;
 }
 
 .post-img {
@@ -41,6 +61,19 @@ h1 {
 h2 {
     font-size: 50px;
     font-weight: bold;
+    position: relative;
+}
+
+h2::after {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    font-size: 15px;
+    content: "TOP";
+    background-color: yellow;
+    color: black;
+    display: inline-block;
+    padding: 5px 10px;
 }
 
 p {
@@ -53,15 +86,15 @@ h3 {
     font-size: 30px;
 }
 
+/* +: h3下一个元素的第一行*/
+h3 + p::first-line {
+    color: red;
+}
+
 h4 {
     font-size: 25px;
     text-align: center;
 }
-
-
-/*footer p {*/
-/*    font-size: 16px;*/
-/*}*/
 
 #copyright {
     font-size: 16px;
@@ -70,10 +103,6 @@ h4 {
 .copyright {
     font-size: 30px;
 }
-
-/*article header p {*/
-/*    font-style: italic;*/
-/*}*/
 
 #author {
     color: red;
@@ -146,6 +175,12 @@ a:hover {
 
 aside {
     width: 500px;
+}
+
+.like-button {
+    position: absolute;
+    bottom: 100px;
+    right: 100px
 }
 
 
